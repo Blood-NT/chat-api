@@ -1,0 +1,18 @@
+.home
+{
+    display: flex;
+}
+.left-main{
+    width: 30%;
+    background-color: red;
+
+}
+.right-main{
+    width: 100%;
+    background-color: blue;
+}
+
+.left-main >.profile{
+display: flex;
+justify-content: space-between;
+}
