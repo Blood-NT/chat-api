@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>My Web Chat</title>
+    <!-- Load Facebook SDK -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId            : '{your-app-id}',
+          autoLogAppEvents : true,
+          xfbml            : true,
+          version          : 'v9.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+  </head>
+  <body>
+    <!-- Your content -->
+    <div id="fb-root"></div>
+    <div class="fb-customerchat"
+      attribution=setup_tool
+      page_id="{your-page-id}"
+      theme_color="#0084ff"
+      logged_in_greeting="Hi! How can I help you today?"
+      logged_out_greeting="Hi! How can I help you today?">
+    </div>
+  </body>
+</html>
